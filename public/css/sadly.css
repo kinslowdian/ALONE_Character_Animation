@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+
+.dev-wrapper
+{
+	width: 100%;
+	height: 100%;
+	
+	position: relative;
+	
+	background: #aee8dc;
+}
+
+.dev-content
+{
+	width: 220px;
+	height: 609px;
+	
+	position: absolute;
+	
+	left: 50%; top: 50%;
+	
+	transform: translate(-50%, -50%);
+}
+
+.dev-guide
+{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	
+	opacity: 0.4;
+}
+
+
+.tween
+{
+	backface-visibility: none;
+}
+
+.sadly
+{
+	width: 220px;
+	height: 609px;
+	
+	position: relative;
+}
+
+.sadly-body
+{
+	width: 220px;
+	height: 340px;
+	
+	position: relative;
+	
+	left: 0; top: 269px;
+}
+
+.sadly-head, .sadly-eye
+{
+	width: 140px;
+	height: 319px;
+	
+	left: 0; top: 0;
+	
+	position: absolute;
+	
+	transform-origin: 0px 269px;
+}
+
+.sadly-jaw
+{
+	width: inherit;
+	height: inherit;
+	
+	position: absolute;
+}
+
+.sadly-jawT
+{
+	width: 170px;
+	height: 50px;
+	position: absolute;
+	
+	left: 50px; top: 219px;
+	
+	transform-origin: 0% 100%;
+}
+
+.sadly-jawB
+{
+	width: 170px;
+	height: 50px;
+	position: absolute;
+	
+	left: 50px; top: 269px;
+	
+	transform-origin: 0% 0%;
+}
+
+
+.sadly[class *= "gfx-"]
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;	
+}
+
+.gfx-jawT
+{
+	background-image: url(../img/frameTest_jawT.svg);	
+}
+
+.gfx-jawB
+{
+	background-image: url(../img/frameTest_jawB.svg);	
+}
+
+.gfx-head
+{
+	background-image: url(../img/frameTest_head-head.svg);	
+}
+
+.gfx-eye
+{
+	background-image: url(../img/frameTest_head-eye.svg);	
+}
+
+.gfx-body
+{
+	background-image: url(../img/frameTest_body.svg);	
+}
+
+.gfx-dev
+{
+	background-image: url(../img/frameTest_guide.svg);
+}
+
+.tween-sadly-head
+{
+	animation:  tweenSadlyHeadFrames 800ms ease-in-out infinite;
+}
+
+@keyframes tweenSadlyHeadFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+.tween-sadly-jawT
+{
+	animation: tweenSadlyJawTFrames 400ms ease-in-out infinite;
+}
+
+@keyframes tweenSadlyJawTFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(-10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+.tween-sadly-jawB
+{
+	animation: tweenSadlyJawBFrames 400ms ease-in-out infinite;
+}
+
+@keyframes tweenSadlyJawBFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(10deg);}
+	100%	{transform: rotate(0deg);}
+}
+
+
+
+
+
+/* !!! RESPONSIVE !!! */
+
+/* MOBILE */
+@media only screen and (min-width: 300px)
+{
+
+}
+
+/* PHABLET */
+@media only screen and (min-width: 600px)
+{
+	
+}
+
+/* TABLET */
+@media only screen and (min-width: 900px)
+{
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px)
+{
+
+}
