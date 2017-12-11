@@ -143,7 +143,7 @@ html, body
 
 .tween-sadly-head
 {
-	animation:  tweenSadlyHeadFrames 800ms ease-in-out infinite;
+	animation:  tweenSadlyHeadFrames ease-in-out infinite;
 }
 
 @keyframes tweenSadlyHeadFrames
@@ -155,7 +155,7 @@ html, body
 
 .tween-sadly-jawT
 {
-	animation: tweenSadlyJawTFrames 400ms ease-in-out infinite;
+	animation: tweenSadlyJawTFrames ease-in-out infinite;
 }
 
 @keyframes tweenSadlyJawTFrames
@@ -167,7 +167,7 @@ html, body
 
 .tween-sadly-jawB
 {
-	animation: tweenSadlyJawBFrames 400ms ease-in-out infinite;
+	animation: tweenSadlyJawBFrames ease-in-out infinite;
 }
 
 @keyframes tweenSadlyJawBFrames
@@ -177,7 +177,46 @@ html, body
 	100%	{transform: rotate(0deg);}
 }
 
+.setting-head-0
+{
+	animation-duration: 1400ms;
+}
 
+.setting-head-1
+{
+	animation-duration: 1000ms;
+}
+
+.setting-head-2
+{
+	animation-duration: 600ms;
+}
+
+.setting-head-3
+{
+	animation-duration: 200ms;
+}
+
+
+.setting-jaw-0
+{
+	animation-duration: 400ms;
+}
+
+.setting-jaw-1
+{
+	animation-duration: 300ms;
+}
+
+.setting-jaw-2
+{
+	animation-duration: 200ms;
+}
+
+.setting-jaw-3
+{
+	animation-duration: 100ms;
+}
 
 
 
