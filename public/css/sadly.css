@@ -170,6 +170,11 @@ html, body
 	animation:  tweenSadlyHeadFrames ease-in-out infinite;
 }
 
+.tween-sadly-stop
+{
+	animation-iteration-count: 1 !important;
+}
+
 @keyframes tweenSadlyHeadFrames
 {
 	0%		{transform: rotate(0deg);}
