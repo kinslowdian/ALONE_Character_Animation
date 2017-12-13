@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+:root
+{
+	--sadlyFill: #0a1e1e;
+}
+
 html, body
 {
 	width: 100%;
@@ -71,6 +76,25 @@ html, body
 	position: absolute;
 	
 	transform-origin: 0px 269px;
+}
+
+.sadly-pupil-wrapper
+{
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+	left: 60px; top: 239px;
+}
+
+.sadly-pupil
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--sadlyFill);
+	
+	transition: 200ms ease-in-out
 }
 
 .sadly-jaw
@@ -216,6 +240,31 @@ html, body
 .setting-jaw-3
 {
 	animation-duration: 100ms;
+}
+
+.setting-eye-F
+{
+	transform: translate(10px, 0);
+}
+
+.setting-eye-D
+{
+	transform: translate(0px, 10px);
+}
+
+.setting-eye-B
+{
+	transform: translate(-10px, 0);
+}
+
+.setting-eye-U
+{
+	transform: translate(0, -10px);
+}
+
+.setting-eye-normal
+{
+	transform: translate(0, 0);
 }
 
 
