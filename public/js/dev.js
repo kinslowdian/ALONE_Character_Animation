@@ -37,6 +37,8 @@ function dev_event(event)
 
 	else
 	{
-		sadly.applyAction(eventNum);
+		sadly.applyAction_head(eventNum);
+		sadly.applyAction_jaw(eventNum);
+		sadly.applyAction_eye(eventNum);
 	}
 }

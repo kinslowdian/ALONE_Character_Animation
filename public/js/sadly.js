@@ -34,9 +34,8 @@ class Sadly
 		this.settings["action" + num].eyeCSS = classKit.eye;
 	}
 
-	applyAction(num)
+	applyAction_head(num)
 	{
-		// HEAD
 		if(this.body_head_static)
 		{
 			this.body_head.classList.remove(this.body_head_static);
@@ -49,8 +48,10 @@ class Sadly
 
 		this.body_head.classList.add(this.settings["action" + num].headCSS);
 		this.body_head_css = this.settings["action" + num].headCSS;
+	}
 
-		// JAW
+	applyAction_jaw(num)
+	{
 		if(this.body_jaw_static)
 		{
 			this.body_jawT.classList.remove(this.body_jaw_static);
@@ -66,8 +67,10 @@ class Sadly
 		this.body_jawT.classList.add(this.settings["action" + num].jawCSS);
 		this.body_jawB.classList.add(this.settings["action" + num].jawCSS);
 		this.body_jaw_css = this.settings["action" + num].jawCSS;
-	
-		// EYE
+	}
+
+	applyAction_eye(num)
+	{
 		if(this.body_eye_css)
 		{
 			this.body_eye.classList.remove(this.body_eye_css);
