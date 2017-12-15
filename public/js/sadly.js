@@ -121,6 +121,11 @@ class Sadly
 		{
 			mc[props.action](props.i);
 		}
+
+		if(props.funct)
+		{
+			props.funct.apply(this, props.functProps);
+		}
 	}
 
 }

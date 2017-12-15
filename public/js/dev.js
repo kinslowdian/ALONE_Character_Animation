@@ -4,9 +4,11 @@
 
 
 
-function timeline_init()
+function timeline_init(num, str)
 {
-	alert("BOOM!");
+	trace(num);
+	trace(str);
+	alert("BOOM! " + num + " " + str);
 }
 
 
@@ -46,7 +48,7 @@ function dev_event(event)
 		sadly.listAction({secs: 2, static: false, action: "applyAction_head", i: 3});
 		sadly.listAction({secs: 4, static: false, action: "applyAction_jaw", i: 1});
 		sadly.listAction({secs: 6, static: false, action: "applyAction_jaw", i: 3});
-		sadly.listAction({secs: 8, static: true, action: "applyStatic_head", css: "tween-sadly-stop"});
+		sadly.listAction({secs: 8, static: true, action: "applyStatic_head", css: "tween-sadly-stop", funct: timeline_init, functProps: [35, "Bo-Peep"]});
 	}
 
 	else
