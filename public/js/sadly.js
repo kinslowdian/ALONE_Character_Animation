@@ -8,6 +8,8 @@ class Sadly
 		this.htmlAttach = div; 
 		this.settings = {};
 
+		this.attachTimeout = null;
+
 		this.linkBody();
 	}
 
@@ -36,6 +38,10 @@ class Sadly
 
 	applyAction_head(num)
 	{
+		trace("num == " + num);
+		trace(this);
+		trace(this.body_head);
+
 		if(this.body_head_static)
 		{
 			this.body_head.classList.remove(this.body_head_static);
@@ -93,6 +99,22 @@ class Sadly
 
 		this.body_jaw_static = css;
 	}
+
+	listActionWithIndex(s, action, i)
+	{
+		this.attachTimeout = setTimeout(this.listActionWithIndexEvent, s * 1000, this, action, i);
+	}
+
+	listActionWithIndexCancel()
+	{
+		clearTimeout(this.attachTimeout);
+	}
+
+	listActionWithIndexEvent(mc, action, i)
+	{
+		mc[action](i);
+	}
+
 }
 
 var sadly;
@@ -122,6 +144,8 @@ function init_sadly()
 	sadly.createActions(3, {head: "setting-head-3", jaw: "setting-jaw-3", eye: "setting-eye-B"});
 
 	trace(sadly);
+
+	timeline_init();
 }
 
 

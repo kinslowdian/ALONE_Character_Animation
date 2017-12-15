@@ -1,3 +1,15 @@
+
+
+
+
+
+
+function timeline_init()
+{
+	
+}
+
+
 function dev_run()
 {
 	dev_btns();
@@ -31,8 +43,12 @@ function dev_event(event)
 	
 	if(eventNum == 4)
 	{
-		sadly.applyStatic_head("tween-sadly-stop");
-		sadly.applyStatic_jaw("tween-sadly-stop");
+		// sadly.applyStatic_head("tween-sadly-stop");
+		// sadly.applyStatic_jaw("tween-sadly-stop");
+	
+		sadly.listActionWithIndex(2, "applyAction_head", 3);
+		sadly.listActionWithIndex(4, "applyAction_jaw", 1);
+		sadly.listActionWithIndex(6, "applyAction_jaw", 3);
 	}
 
 	else
