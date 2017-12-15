@@ -6,7 +6,7 @@
 
 function timeline_init()
 {
-	
+	alert("BOOM!");
 }
 
 
@@ -43,17 +43,10 @@ function dev_event(event)
 	
 	if(eventNum == 4)
 	{
-		// sadly.applyStatic_head("tween-sadly-stop");
-		// sadly.applyStatic_jaw("tween-sadly-stop");
-		
-		// sadly.listActionWithIndex(2, "applyAction_head", 3);
-		// sadly.listActionWithIndex(4, "applyAction_jaw", 1);
-		// sadly.listActionWithIndex(6, "applyAction_jaw", 3);
-
-		sadly.listActionWithIndex({secs: 2, static: false, action: "applyAction_head", i: 3});
-		sadly.listActionWithIndex({secs: 4, static: false, action: "applyAction_jaw", i: 1});
-		sadly.listActionWithIndex({secs: 6, static: false, action: "applyAction_jaw", i: 3});
-		sadly.listActionWithIndex({secs: 8, static: true, action: "applyStatic_head", css: "tween-sadly-stop"});
+		sadly.listAction({secs: 2, static: false, action: "applyAction_head", i: 3});
+		sadly.listAction({secs: 4, static: false, action: "applyAction_jaw", i: 1});
+		sadly.listAction({secs: 6, static: false, action: "applyAction_jaw", i: 3});
+		sadly.listAction({secs: 8, static: true, action: "applyStatic_head", css: "tween-sadly-stop"});
 	}
 
 	else

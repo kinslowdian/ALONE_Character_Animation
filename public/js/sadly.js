@@ -100,17 +100,17 @@ class Sadly
 		this.body_jaw_static = css;
 	}
 
-	listActionWithIndex(props)
+	listAction(props)
 	{
-		this.attachTimeout = setTimeout(this.listActionWithIndexEvent, props.secs * 1000, this, props);		
+		this.attachTimeout = setTimeout(this.listActionEvent, props.secs * 1000, this, props);		
 	}
 
-	listActionWithIndexCancel()
+	listActionCancel()
 	{
 		clearTimeout(this.attachTimeout);
 	}
 
-	listActionWithIndexEvent(mc, props)
+	listActionEvent(mc, props)
 	{
 		if(props.static)
 		{
@@ -152,8 +152,6 @@ function init_sadly()
 	sadly.createActions(3, {head: "setting-head-3", jaw: "setting-jaw-3", eye: "setting-eye-B"});
 
 	trace(sadly);
-
-	timeline_init();
 }
 
 
