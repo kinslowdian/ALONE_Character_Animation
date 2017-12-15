@@ -100,9 +100,9 @@ class Sadly
 		this.body_jaw_static = css;
 	}
 
-	listActionWithIndex(s, action, i)
+	listActionWithIndex(props)
 	{
-		this.attachTimeout = setTimeout(this.listActionWithIndexEvent, s * 1000, this, action, i);
+		this.attachTimeout = setTimeout(this.listActionWithIndexEvent, props.secs * 1000, this, props);		
 	}
 
 	listActionWithIndexCancel()
@@ -110,9 +110,17 @@ class Sadly
 		clearTimeout(this.attachTimeout);
 	}
 
-	listActionWithIndexEvent(mc, action, i)
+	listActionWithIndexEvent(mc, props)
 	{
-		mc[action](i);
+		if(props.static)
+		{
+			mc[props.action](props.css);
+		}
+
+		else
+		{
+			mc[props.action](props.i);
+		}
 	}
 
 }
