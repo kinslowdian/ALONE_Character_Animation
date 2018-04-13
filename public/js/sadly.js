@@ -154,7 +154,7 @@ function init_sadly()
 	sadly.createActions(0, {head: "setting-head-0", jaw: "setting-jaw-0", eye: "setting-eye-F"});
 	sadly.createActions(1, {head: "setting-head-1", jaw: "setting-jaw-1", eye: "setting-eye-D"});
 	sadly.createActions(2, {head: "setting-head-2", jaw: "setting-jaw-2", eye: "setting-eye-U"});
-	sadly.createActions(3, {head: "setting-head-3", jaw: "setting-jaw-3", eye: "setting-eye-B"});
+	sadly.createActions(3, {head: "setting-head-3", jaw: "setting-jaw-3", eye: "setting-eye-C"});
 
 	trace(sadly);
 }
