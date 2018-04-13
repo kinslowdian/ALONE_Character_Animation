@@ -57,7 +57,22 @@ html, body
 	width: var(--sadly-w);
 	height: var(--sadly-h);
 	
-	position: relative;
+	position: absolute;
+}
+
+.sadly-top
+{
+	width: var(--sadly-w);
+	position: absolute;
+
+	animation: testFrames 200ms ease-in-out infinite;
+}
+
+@keyframes testFrames
+{
+	0%		{transform: translateY(0);}
+	50%		{transform: translateY(10px);}
+	100%	{transform: translateY(0);}
 }
 
 .sadly-body

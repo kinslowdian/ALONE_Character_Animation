@@ -1,7 +1,7 @@
 
 
 
-
+var testDelay;
 
 
 function timeline_init(num, str)
@@ -15,8 +15,16 @@ function timeline_init(num, str)
 function dev_run()
 {
 	dev_btns();
+
+	testDelay = setTimeout(automatic, 3 * 1000);
 }
 
+function automatic()
+{
+	sadly.applyAction_head(1);
+	sadly.applyAction_jaw(1);
+	sadly.applyAction_eye(1);		
+}
 
 function dev_btns()
 {
