@@ -108,6 +108,8 @@ html, body
 	position: absolute;
 
 	left: 0; top: 0;
+
+	transform-origin: 0 40px;
 }
 
 .sadly-eye
@@ -176,7 +178,6 @@ html, body
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
-	outline: 1px solid pink;
 }
 
 .gfx-jawT
@@ -308,22 +309,22 @@ html, body
 
 .setting-eye-F
 {
-	transform: translate(10px, 0);
+	transform: translate(1.5px, 0);
 }
 
 .setting-eye-D
 {
-	transform: translate(0px, 10px);
+	transform: translate(0px, 1.5px);
 }
 
 .setting-eye-B
 {
-	transform: translate(-10px, 0);
+	transform: translate(-1.5px, 0);
 }
 
 .setting-eye-U
 {
-	transform: translate(0, -10px);
+	transform: translate(0, -1.5px);
 }
 
 .setting-eye-normal
