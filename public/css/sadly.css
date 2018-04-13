@@ -3,6 +3,8 @@
 :root
 {
 	--sadlyFill: #0a1e1e;
+	--sadly-w: 55px;
+	--sadly-h: 125px;
 }
 
 html, body
@@ -25,8 +27,8 @@ html, body
 
 .dev-content
 {
-	width: 220px;
-	height: 609px;
+	width: var(--sadly-w);
+	height: var(--sadly-h);
 	
 	position: absolute;
 	
@@ -52,114 +54,169 @@ html, body
 
 .sadly
 {
-	width: 220px;
-	height: 609px;
+	width: var(--sadly-w);
+	height: var(--sadly-h);
 	
 	position: relative;
 }
 
 .sadly-body
 {
-	width: 220px;
-	height: 340px;
-	
-	position: relative;
-	
-	left: 0; top: 269px;
-}
-
-.sadly-head, .sadly-eye
-{
-	width: 140px;
-	height: 319px;
-	
-	left: 0; top: 0;
+	width: 55px;
+	height: 62.5px;
 	
 	position: absolute;
 	
-	transform-origin: 0px 269px;
+	left: 0; top: 40px;
+}
+
+.sadly-leg
+{
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+}
+
+.sadly-leg0
+{
+	left: 5px;
+	top: 105px;
+}
+
+.sadly-leg1
+{
+	left: 30px;
+	top: 105px;
+}
+
+.sadly-arm
+{
+	width: 6.25px;
+	height: 20.625px;
+
+	position: absolute;
+
+	left: 5px; top: 28.125px;
+}
+
+.sadly-head
+{
+	width: 33.754px;
+	height: 52.5px;
+
+	position: absolute;
+
+	left: 0; top: 0;
+}
+
+.sadly-eye
+{
+	width: 7.5px;
+	height: 7.5px;
+
+	position: absolute;
+
+	left: 13.75px; top: 31.25px;
 }
 
 .sadly-pupil-wrapper
 {
-	width: 20px;
-	height: 20px;
+	width: 5px;
+	height: 5px;
 
 	position: absolute;
-	left: 60px; top: 239px;
+	left: 1.25px; top: 1.25px;
 }
 
 .sadly-pupil
 {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: var(--sadlyFill);
-	
-	transition: 200ms ease-in-out
+	width: 5px;
+	height: 5px;
+
+	position: absolute;
+
+	transition: 200ms ease-in-out;
 }
 
 .sadly-jaw
 {
-	width: inherit;
-	height: inherit;
+	width: 42.5px;
 	
 	position: absolute;
+
+	left: 12.5px; top: 27.5px;
 }
 
 .sadly-jawT
 {
-	width: 170px;
-	height: 50px;
+	width: 42.5px;
+	height: 12.5px;
 	position: absolute;
 	
-	left: 50px; top: 219px;
+	left: 0; top: 0;
 	
 	transform-origin: 0% 100%;
 }
 
 .sadly-jawB
 {
-	width: 170px;
-	height: 50px;
+	width: 42.5px;
+	height: 12.5px;
 	position: absolute;
 	
-	left: 50px; top: 269px;
+	left: 0; top: 12.5px;
 	
 	transform-origin: 0% 0%;
 }
 
 
-.sadly[class *= "gfx-"]
+[class *= "gfx-"]
 {
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 100%;	
+	background-size: 100%;
+	outline: 1px solid pink;
 }
 
 .gfx-jawT
 {
-	background-image: url(../img/frameTest_jawT.svg);	
+	background-image: url(../img/sadly_JAW_T.svg);	
 }
 
 .gfx-jawB
 {
-	background-image: url(../img/frameTest_jawB.svg);	
+	background-image: url(../img/sadly_JAW_B.svg);	
 }
 
 .gfx-head
 {
-	background-image: url(../img/frameTest_head-head.svg);	
+	background-image: url(../img/sadly_HEAD.svg);	
 }
 
 .gfx-eye
 {
-	background-image: url(../img/frameTest_head-eye.svg);	
+	background-image: url(../img/sadly_HEAD_EYE.svg);	
+}
+
+.gfx-eye-pupil
+{
+	background-image: url(../img/sadly_EYE.svg);
 }
 
 .gfx-body
 {
-	background-image: url(../img/frameTest_body.svg);	
+	background-image: url(../img/sadly_BODY.svg);	
+}
+
+.gfx-leg
+{
+	background-image: url(../img/sadly_LEG_0.svg);	
+}
+
+.gfx-arm
+{
+	background-image: url(../img/sadly_ARM.svg);
 }
 
 .gfx-dev
