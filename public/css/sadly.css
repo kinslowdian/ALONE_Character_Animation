@@ -5,47 +5,8 @@
 	--sadlyFill: #0a1e1e;
 	--sadly-w: 55px;
 	--sadly-h: 125px;
+	--sadlyWalk: 200ms;
 }
-
-html, body
-{
-	width: 100%;
-	height: 100%;
-
-	overflow: hidden;
-}
-
-.dev-wrapper
-{
-	width: 100%;
-	height: 100%;
-	
-	position: relative;
-	
-	background: #aee8dc;
-}
-
-.dev-content
-{
-	width: var(--sadly-w);
-	height: var(--sadly-h);
-	
-	position: absolute;
-	
-	left: 50%; top: 50%;
-	
-	transform: translate(-50%, -50%);
-}
-
-.dev-guide
-{
-	width: inherit;
-	height: inherit;
-	position: absolute;
-	
-	opacity: 0.4;
-}
-
 
 .tween
 {
@@ -64,15 +25,52 @@ html, body
 {
 	width: var(--sadly-w);
 	position: absolute;
-
-	animation: testFrames 200ms ease-in-out infinite;
 }
 
-@keyframes testFrames
+.tween-walk-body
+{
+	animation: tweenWalkBodyFrames var(--sadlyWalk) ease-in-out infinite;
+}
+
+.tween-walk-leg-0
+{
+	animation: tweenWalkLeg0Frames var(--sadlyWalk) ease-in-out infinite;
+}
+
+.tween-walk-leg-1
+{
+	animation: tweenWalkLeg1Frames var(--sadlyWalk) ease-in-out infinite;
+}
+
+.tween-walk-arm
+{
+	animation: tweenWalkArmFrames var(--sadlyWalk) ease-in-out infinite;	
+}
+
+@keyframes tweenWalkBodyFrames
 {
 	0%		{transform: translateY(0);}
 	50%		{transform: translateY(10px);}
 	100%	{transform: translateY(0);}
+}
+
+@keyframes tweenWalkLeg0Frames
+{
+	0%		{transform: translateX(0);}
+	100%	{transform: translateX(25px);}
+}
+
+@keyframes tweenWalkLeg1Frames
+{
+	0%		{transform: translateX(0);}
+	100%	{transform: translateX(-25px);}
+}
+
+@keyframes tweenWalkArmFrames
+{
+	0%		{transform: rotate(0deg);}
+	50%		{transform: rotate(-60deg);}
+	100%	{transform: rotate(0deg);}
 }
 
 .sadly-body
@@ -113,6 +111,8 @@ html, body
 	position: absolute;
 
 	left: 5px; top: 28.125px;
+
+	transform-origin: 3.125px 3.125px;
 }
 
 .sadly-head
