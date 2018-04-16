@@ -5,7 +5,7 @@
 	--sadlyFill: #0a1e1e;
 	--sadly-w: 55px;
 	--sadly-h: 125px;
-	--sadlyWalk: 200ms;
+	--sadlyWalkSpeed: 200ms;
 }
 
 .tween
@@ -29,22 +29,22 @@
 
 .tween-walk-body
 {
-	animation: tweenWalkBodyFrames var(--sadlyWalk) ease-in-out infinite;
+	animation: tweenWalkBodyFrames var(--sadlyWalkSpeed) ease-in-out infinite;
 }
 
 .tween-walk-leg-0
 {
-	animation: tweenWalkLeg0Frames var(--sadlyWalk) ease-in-out infinite;
+	animation: tweenWalkLeg0Frames var(--sadlyWalkSpeed) ease-in-out infinite;
 }
 
 .tween-walk-leg-1
 {
-	animation: tweenWalkLeg1Frames var(--sadlyWalk) ease-in-out infinite;
+	animation: tweenWalkLeg1Frames var(--sadlyWalkSpeed) ease-in-out infinite;
 }
 
 .tween-walk-arm
 {
-	animation: tweenWalkArmFrames var(--sadlyWalk) ease-in-out infinite;	
+	animation: tweenWalkArmFrames calc(var(--sadlyWalkSpeed) * 2) ease-in-out infinite;	
 }
 
 @keyframes tweenWalkBodyFrames
